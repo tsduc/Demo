@@ -20,19 +20,7 @@ namespace WebApplication1
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-                name: "Trang1",
-                url: "trang",
-                defaults: new { controller = "New", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "WebApplication1.Controllers" }
-            );
-
-            routes.MapRoute(
-                name: "Trang2",
-                url: "trang_2",
-                defaults: new { controller = "New", action = "Index2" },
-                namespaces: new[] { "WebApplication1.Controllers" }
-            );
+          
         }
     }
 }
