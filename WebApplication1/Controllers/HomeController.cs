@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -13,11 +14,14 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult About(string id)
         {
-            ViewBag.Message = "Your application description page.";
+            MyModel myobj = new MyModel();
+            myobj.NAME = "Thu vien lap trinh";
+            myobj.PHONE = "123456";
+            ViewBag.Message = "Your application description page." + id;
 
-            return View();
+            return View(myobj);
         }
 
         public ActionResult Contact()
