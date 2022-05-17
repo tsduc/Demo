@@ -122,10 +122,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
+    <Compile Include="Controllers\Student.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TaiKhoanController.cs" />
+    <Compile Include="Controllers\TVLTController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DbContext.cs" />
+    <Compile Include="Models\DbSet.cs" />
     <Compile Include="Models\MyModel.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -167,9 +177,16 @@
     <Content Include="Views\MyLayout\LayoutFrontEnd.cshtml" />
     <Content Include="Views\New\Index.cshtml" />
     <Content Include="Views\New\Index2.cshtml" />
+    <Content Include="Views\TaiKhoan\DangNhap.cshtml" />
+    <Content Include="Views\TaiKhoan\ThongTinTaiKhoan.cshtml" />
+    <Content Include="Views\TaiKhoan\DangNhapHeThong.cshtml" />
+    <Content Include="Views\Student\index.cshtml" />
+    <Content Include="Views\Pages\Form.cshtml" />
+    <Content Include="Views\Pages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\TVLT\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

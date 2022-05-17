@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "ThongTinTaiKhoan";
+    Layout = "~/Views/MyLayout/LayoutFrontEnd.cshtml";
+}
+
+<h2>Thong Tin Tai Khoan</h2>
+@if (@TempData["tendangnhap"] == null && @TempData["matkhau"] == null)
+{
+    <h2>khong co gi</h2>
+}
+else
+{
+    <label>Ten dang nhap: </label>@TempData["tendangnhap"]
+    <br />
+    <label>Mat khau: </label>@TempData["matkhau"]
+    <h2>@TempData["tendangnhap"]</h2>
+    <h2>@TempData["matkhau"]</h2>
+}
+

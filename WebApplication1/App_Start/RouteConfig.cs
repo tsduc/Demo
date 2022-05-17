@@ -14,6 +14,26 @@ namespace WebApplication1
             routes.MapMvcAttributeRoutes();
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //Trang xem danh sach sach
+            routes.MapRoute(
+                name: "listbook",
+                url: "tim-sach",
+                defaults: new { controller = "Book", action = "List" }
+            );
+
+            //Trang xem thong tin 1 quyen sach
+            routes.MapRoute(
+                name: "Detail of book",
+                url: "xem-sach/{sach_id}",
+                defaults: new { controller = "Book", action = "Detail" }
+            );
+
+            routes.MapRoute(
+                name: "My Example",
+                url: "{hello}/xin-chao-cac-ban",
+                defaults: new { controller = "Home", action = "Contact" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/MyLayout/LayoutFrontEnd.cshtml";
+}
+
+<h2>Dang nhap tai khoan</h2>
+
+<form action="/TaiKhoan/DangNhapHeThong" method="get">
+    <label>Ten dang nhap</label>
+    <input type="text" name="tenDangNhap" />
+    <label>Mat khau</label>
+    <input type="text" name="matKhau" />
+
+    @*<input type="submit" value="Dang nhap"/>*@
+    <button type="submit">Dang nhap</button>
+
+    @if (ViewBag.thongbao != null)
+    {
+        <p style="color:red">@ViewBag.thongbao</p>
+    }
+</form>
+@* @using (Html.BeginForm("DangNhapHeThong", "TaiKhoan", FormMethod.Get))
+{
+    <label>Ten dang nhap</label>
+    <input type="text" name="tenDangNhap" />
+    <label>Mat khau</label>
+    <input type="text" name="matKhau" />
+    
+    <button type="submit">Dang nhap</button>
+
+    @if (ViewBag.thongbao != null)
+    {
+        <p style="color:red">@ViewBag.thongbao</p>
+    }
+} *@
+
+
