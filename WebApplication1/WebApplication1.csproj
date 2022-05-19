@@ -120,9 +120,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewController.cs" />
     <Compile Include="Controllers\PagesController.cs" />
+    <Compile Include="Controllers\ProducttController.cs" />
     <Compile Include="Controllers\Student.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TaiKhoanController.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="Models\DbSet.cs" />
     <Compile Include="Models\MyModel.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Productt.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -181,11 +184,15 @@
     <Content Include="Views\TaiKhoan\ThongTinTaiKhoan.cshtml" />
     <Content Include="Views\TaiKhoan\DangNhapHeThong.cshtml" />
     <Content Include="Views\Student\index.cshtml" />
-    <Content Include="Views\Pages\Form.cshtml" />
     <Content Include="Views\Pages\Index.cshtml" />
+    <Content Include="Views\Pages\Add.cshtml" />
+    <Content Include="Views\Hemo\Index.cshtml" />
+    <Content Include="Views\Hemo\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\HomeControler\" />
+    <Folder Include="Views\Productt\" />
     <Folder Include="Views\TVLT\" />
   </ItemGroup>
   <ItemGroup>

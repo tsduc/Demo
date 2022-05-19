@@ -6,16 +6,10 @@ using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
 {
-    public class PagesController : Controller
+    public class ProducttController : Controller
     {
-        // GET: Pages
+        // GET: Productt
         public ActionResult Index()
-        {
-            return View();
-        }
-
-
-        public ActionResult Add()
         {
             return View();
         }

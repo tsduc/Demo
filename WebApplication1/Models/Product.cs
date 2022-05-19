@@ -5,14 +5,11 @@ using System.Web;
 
 namespace WebApplication1.Models
 {
-    public class Product
+    public class ProductEditModel
     {
-        public int ProductId { get; set; }
-        public string ProductName { get; set; }
-        public string Description { get; set; }
-        public int Status { get; set; }
-        public byte[] Image { get; set; }
-        public string UrlImage { get; set; }
-
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public decimal Rate { get; set; }
+        public int Rating { get; set; }
     }
 }

@@ -1,48 +1,7 @@
-﻿@using System;
-@{
-    ViewData["Title"] = "Thêm khách hàng";
-
-    @functions {
-
-        dynamic customerinfo { set; get; }
-
-        public void OnPost()
-        {
-
-            string customername = Request.Form["customername"];
-            string email = Request.Form["email"];
-            int yearofbirth = Convert.ToInt32(Request.Form["yearofbirth"]);
-
-            customerinfo =
-            new
-            {
-                customername = customername,
-                email = email,
-                yearofbirth = yearofbirth
-            };
-
-
-        }
-    }
-}
-
-
-@{
-    if (customerinfo != null)
-    {
-        <h3>Thông tin gửi</h3>
-        <div class="card">
-            <div class="card-body">
-                <p><strong>Tên: </strong> @customerinfo.customername</p>
-                <p><strong>Email: </strong> @customerinfo.email</p>
-                <p><strong>Năm sinh: </strong> @customerinfo.yearofbirth</p>
-            </div>
-        </div>
-    }
-}
+﻿
 
 <h2 class="display-4">Nhập thông tin</h2>
-<form method="post" class="m-2 p-3 bg-light">
+<form action="/Pages/Add" method="post" class="m-2 p-3 bg-light">
     <div class="form-group">
         <label for="customername">Tên khách hàng:</label>
         <input class="form-control" type="text" name="customername" value="" />

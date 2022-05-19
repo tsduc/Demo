@@ -10,5 +10,9 @@ namespace WebApplication1.Models
         public string NAME { get; set; }
 
         public string PHONE { get; set; }
+
+        public string product { get; set; }
+        public string Rate { get; set; }
+        public string Rating { get; set; }
     }
 }
