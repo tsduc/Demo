@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,7 +20,9 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View();
+            ProductEditModel obj = new ProductEditModel();
+
+            return View(obj);
         }
 
 
@@ -43,20 +46,30 @@ namespace WebApplication1.Controllers
 
             //}
 
+            var arlist = new List<ProductEditModel> ();
+
             if (ModelState.IsValid)
             {
-                ProductEditModel obj = new ProductEditModel();
-                obj.Name = model.Name;
-                obj.Rate = model.Rate;
-                obj.Rating = model.Rating;
+                //ProductEditModel obj = new ProductEditModel();
+                //obj.Name = model.Name;
+                //obj.Rate = model.Rate;
+                //obj.Rating = model.Rating;
 
-                return View(obj);
+
+                arlist.Add(model);
+
+
+                ViewData["hh"] = arlist;
+
+                return View();
             }
             else
             {
                 return Index();
             }
-           
+
+
+
             //else
             //{
             //    message = "Failed to create the product. Please try again";

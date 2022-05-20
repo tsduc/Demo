@@ -14,12 +14,22 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public ActionResult About(string id)
+        [HttpGet]
+        public ActionResult About()
         {
             MyModel myobj = new MyModel();
-            myobj.NAME = "Thu vien lap trinh";
-            myobj.PHONE = "123456";
-            ViewBag.Message = "Your application description page." + id;
+            
+
+            return View(myobj);
+        }
+
+        [HttpPost]
+        public ActionResult About(MyModel id)
+        {
+            MyModel myobj = new MyModel();
+            myobj.NAME = id.NAME;
+            myobj.PHONE = id.PHONE;
+            ViewBag.Message = "Your application description page.";
 
             return View(myobj);
         }

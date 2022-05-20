@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DemoAjaxController.cs" />
     <Compile Include="Controllers\HemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewController.cs" />
@@ -136,6 +137,7 @@
     <Compile Include="Models\DbSet.cs" />
     <Compile Include="Models\MyModel.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductModel.cs" />
     <Compile Include="Models\Productt.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\StudentContext.cs" />
@@ -158,6 +160,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -188,6 +191,8 @@
     <Content Include="Views\Pages\Add.cshtml" />
     <Content Include="Views\Hemo\Index.cshtml" />
     <Content Include="Views\Hemo\Create.cshtml" />
+    <Content Include="Views\DemoAjax\CreateAjax.cshtml" />
+    <Content Include="Views\DemoAjax\CreateHtml.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

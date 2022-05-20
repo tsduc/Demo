@@ -1,5 +1,6 @@
-﻿@model WebApplication1.Models.Productt
-
+﻿@model WebApplication1.Models.ProductEditModel
+@using System.Collections;
+@using WebApplication1.Models;
 @{
     ViewData["Title"] = "Create";
 }
@@ -26,12 +27,46 @@
         }
     </ul>*@
 
-@{ 
-    if (@Model.Name != null)
+@*if (@Model.Name != null)
     {
         <h1>@Model.Name</h1>
-    }else
+    }*@
+
+@*string[] Name;
+decimal[] Rate;
+int[] Rating;
+
+Name[Name.Length] = @Model.Name;
+Rate[Rate.Length] = @Model.Rate;
+Rating[Rating.Length] = @Model.Rating;*@
+
+@{
+    if (ViewData["hh"] != null && ViewData["hh"] is List<ProductEditModel>)
     {
-        <h1>Khong nhan duoc gi</h1>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Rate</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach (var std in ViewData["hh"] as List<ProductEditModel>)
+                    {
+                        <td>
+                            @std.Name
+                        </td>
+                        <td>
+                            @std.Rate
+                        </td>
+                        <td>
+                            @std.Rating
+                        </td>
+                    }
+                </tr>
+            </tbody>
+        </table>
     }
 }

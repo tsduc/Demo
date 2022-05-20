@@ -1,0 +1,15 @@
+﻿@model WebApplication1.Models.ProductModel
+@{
+    ViewBag.Title = "CreateHtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CreateHtml</h2>
+@* Action="CreateHtml",Controller="DemoAjax" *@
+@using (Html.BeginForm("CreateHtml", "DemoAjax"))
+{
+    <div>Id @Html.TextBoxFor(m => m.Id)</div>
+    <div>Name @Html.TextBoxFor(m => m.Name)</div>
+    <div>Price @Html.TextBoxFor(m => m.Price)</div>
+    <div><input type="submit" value="Add Product" /></div>
+}

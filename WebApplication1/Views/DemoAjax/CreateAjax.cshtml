@@ -1,0 +1,22 @@
+﻿@model WebApplication1.Models.ProductModel
+@{
+    ViewBag.Title = "CreateAjax";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CreateAjax</h2>
+
+@* Action="CreateAjax",Controller="DemoAjax" *@
+@using (Ajax.BeginForm("CreateAjax", "DemoAjax", new AjaxOptions { UpdateTargetId = "Productresult" }))
+
+{
+    <div id="Productresult"></div>
+    <div>Id @Html.TextBoxFor(m => m.Id)</div>
+    <div>Name @Html.TextBoxFor(m => m.Name)</div>
+    <div>Price @Html.TextBoxFor(m => m.Price)</div>
+    <div><input type="submit" value="Add Product" /></div>
+}
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
