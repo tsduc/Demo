@@ -6,16 +6,34 @@
 }
 
 
+
 <h2>Create</h2>
 
 <form action="/hemo/create" method="post">
-    <label for="Name">Name</label>
-    <input type="text" name="Name" />
-    <label for="Rate">Rate</label>
-    <input type="text" name="Rate" />
-    <label for="Rating">Rating</label>
-    <input type="text" name="Rating" />
-    <input type="submit" name="submit" />
+
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>
+                    <label for="Name">Name</label>
+                    <input type="text" name="Name" />
+                </th>
+
+                <th>
+                    <label for="Rate">Rate</label>
+                    <input type="text" name="Rate" />
+                </th>
+                <th>
+                    <label for="Rating">Rating</label>
+                    <input type="text" name="Rating" />
+                    <input type="submit" name="submit" />
+                </th>
+            </tr>
+        </thead>
+    </table>
+
 </form>
 
 @*<ul>
@@ -33,16 +51,19 @@
     }*@
 
 @*string[] Name;
-decimal[] Rate;
-int[] Rating;
+    decimal[] Rate;
+    int[] Rating;
 
-Name[Name.Length] = @Model.Name;
-Rate[Rate.Length] = @Model.Rate;
-Rating[Rating.Length] = @Model.Rating;*@
+    Name[Name.Length] = @Model.Name;
+    Rate[Rate.Length] = @Model.Rate;
+    Rating[Rating.Length] = @Model.Rating;*@
 
 @{
+
     if (ViewData["hh"] != null && ViewData["hh"] is List<ProductEditModel>)
     {
+
+
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -53,20 +74,53 @@ Rating[Rating.Length] = @Model.Rating;*@
             </thead>
             <tbody>
                 <tr>
+
                     @foreach (var std in ViewData["hh"] as List<ProductEditModel>)
-                    {
-                        <td>
-                            @std.Name
-                        </td>
-                        <td>
-                            @std.Rate
-                        </td>
-                        <td>
-                            @std.Rating
-                        </td>
-                    }
+                        {
+                    <td>
+                        @std.Name
+                        
+                    </td>
+                    <td>
+                        @std.Rate
+                    </td>
+                    <td>
+
+                        @std.Rating
+                    </td>
+                        }
                 </tr>
             </tbody>
         </table>
+
+
+
+        @*if (ViewData["hh"] != null && ViewData["hh"] is List<ProductEditModel>)
+            {
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Rate</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            @foreach (var std in ViewData["hh"] as List<ProductEditModel>)
+                            {
+                                <td>
+                                    @std.Name
+                                </td>
+                                <td>
+                                    @std.Rate
+                                </td>
+                                <td>
+                                    @std.Rating
+                                </td>
+                            }
+                        </tr>
+                    </tbody>
+                </table>*@
     }
 }

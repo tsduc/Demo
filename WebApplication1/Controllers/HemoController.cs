@@ -25,10 +25,30 @@ namespace WebApplication1.Controllers
             return View(obj);
         }
 
+        List<ProductEditModel> arlist = null;
 
         [HttpPost]
         public ActionResult Create(ProductEditModel model)
         {
+            if (arlist == null) {
+                arlist = new List<ProductEditModel>();
+            }
+
+            if (ModelState.IsValid)
+            {
+                arlist.Add(model);
+
+
+                ViewData["hh"] = arlist;
+
+                return View();
+            }
+            else
+            {
+                return Index();
+            }
+
+
             //string message = "";
 
             //if (ModelState.IsValid)
@@ -46,27 +66,7 @@ namespace WebApplication1.Controllers
 
             //}
 
-            var arlist = new List<ProductEditModel> ();
 
-            if (ModelState.IsValid)
-            {
-                //ProductEditModel obj = new ProductEditModel();
-                //obj.Name = model.Name;
-                //obj.Rate = model.Rate;
-                //obj.Rating = model.Rating;
-
-
-                arlist.Add(model);
-
-
-                ViewData["hh"] = arlist;
-
-                return View();
-            }
-            else
-            {
-                return Index();
-            }
 
 
 
